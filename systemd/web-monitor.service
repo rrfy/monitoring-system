@@ -1,0 +1,14 @@
+[Unit]
+Description=Monitoring HelloWorld Web App
+After=network.target
+
+[Service]
+Type=simple
+User=$YOUR_USERNAME$   # Замени на своё имя пользователя!
+WorkingDirectory=/полный/путь/к/pапке/monitoring-system
+ExecStart=/bin/bash /полный/путь/к/pапке/monitoring-system/start_monitoring.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
